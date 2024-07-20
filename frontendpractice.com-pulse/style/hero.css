@@ -1,0 +1,245 @@
+.hero {
+  background-color: var(--bg-green);
+  padding: 0 1rem;
+  min-height: 100vh;
+  border-bottom: solid 1px var(--border-gray);
+}
+
+/* =====text section===== */
+.hero-try-pulse {
+  color: var(--txt-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 750px) {
+    align-items: flex-start;
+  }
+}
+
+.hero-try-pulse>* {
+  text-align: center;
+
+  @media (max-width: 750px) {
+    text-align: left;
+  }
+}
+
+.hero-try-pulse h1 {
+  font-size: 3.5rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  line-height: 3rem;
+}
+
+.hero-try-pulse span {
+  line-height: 1.3rem;
+}
+
+/* =====card section===== */
+.hero-pricing {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 5rem;
+  margin: 0 auto;
+  width: 1100px;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "one"
+      "two";
+    gap: 2rem;
+    width: 80%;
+  }
+}
+
+.hero-pricing>* {
+  background-color: var(--bg-white);
+  align-self: center;
+  padding: 1rem;
+  min-height: 25rem;
+}
+
+.hero-pricing h1,
+.hero-pricing h3 {
+  color: var(--txt-darkgreen);
+  padding: 2rem;
+  padding-bottom: 1rem;
+}
+
+.hero-pricing> :nth-child(1) {
+  background-color: transparent;
+}
+
+.hero-pricing> :nth-child(1)> :not(:first-child) {
+  padding: 1.9rem;
+  padding-top: 0;
+}
+
+.hero-pricing> :nth-child(1) ul li {
+  padding: 0.3rem;
+}
+
+.hero-pricing-recommended {
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  background-color: var(--txt-darkgreen);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.2rem;
+}
+
+.hero-pricing> :nth-child(2) {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border: var(--txt-darkgreen) solid 1px;
+  padding: 0;
+  min-height: 40rem;
+}
+
+.hero-pricing> :nth-child(2) h1 {
+  font-size: 2.6rem;
+  text-align: center;
+}
+
+.hero-pricing-recommended-secondary {
+  background-color: var(--bg-grey);
+  font-weight: 400;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.hero-pricing> :nth-child(3) {
+  border: var(--border-gray) solid 1px;
+  padding: 0;
+}
+
+.hero-pricing> :nth-child(3) h1 {
+  font-weight: 500;
+  text-align: center;
+}
+
+.hero-pricing-card-text {
+  padding: 2rem;
+  padding-top: 1rem;
+}
+
+.hero-pricing-card-text ul {
+  list-style: none;
+}
+
+.hero-pricing-card-text ul li {
+  padding: 0.3rem;
+}
+
+.hero-pricing-card-text ul li::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  background-image: url("../img/pulse-check.svg");
+}
+
+@media (max-width: 1200px) {
+
+  /* change order of cards */
+  .hero-pricing> :nth-child(1) {
+    display: none;
+  }
+
+  .hero-pricing> :nth-child(2) {
+    grid-area: one;
+  }
+
+  .hero-pricing> :nth-child(3) {
+    grid-area: two;
+  }
+
+}
+
+.hero-pricing-price {
+  color: var(--txt-gray);
+  font-weight: 400;
+  text-align: center;
+}
+
+.btn-green {
+  background-color: var(--bg-lightgreen);
+  color: var(--txt-black);
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 0.3rem;
+  max-width: 10rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.btn-green:hover {
+  scale: 1.2;
+  transition: scale 0.1s ease-in-out;
+}
+
+.hero-pricing-smalltext {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 1rem;
+  margin: 0 !important;
+}
+
+/* =====review comment===== */
+.hero-review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding: 1rem;
+  padding-bottom: 5rem;
+  margin-top: 5rem;
+
+}
+
+.hero-review>* {
+  text-align: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  max-width: 700px;
+}
+
+.hero-review-comment {
+  font-size: 1.5rem;
+  position: relative;
+  padding: 0.5rem;
+}
+
+.hero-review-comment h1 {
+  color: var(--txt-gray);
+  font-size: 3rem;
+  display: inline-block;
+  position: absolute;
+}
+
+.hero-review-comment :first-child {
+  top: 0;
+  left: -20px;
+}
+
+.hero-review-comment :last-child {
+  bottom: -20px;
+  right: -20px;
+}

@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  color: var(--txt-black);
+}
+
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  --border-gray: #d6dae5;
+  --bg-white: #FFFFFE;
+  --bg-grey: #f2f3f3;
+  --bg-green: #eafaf1;
+  --bg-lightgreen: #1fe374;
+  --txt-darkgreen: #00ad6a;
+  --txt-black: #080c16;
+  --txt-gray: #83858a;
+
+  background-color: #fcfcfc;
+  font-family: Work Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.color-borderGray {
+  color: var(--border-gray);
+}
+
+.color-bgWhite {
+  color: var(--bg-white);
+}
+
+.color-bgGrey {
+  color: var(--bg-grey);
+}
+
+.color-bgGreen {
+  color: var(--bg-green);
+}
+
+.color-bgLightgreen {
+  color: var(--bg-lightgreen);
+}
+
+.color-txtDarkgreen {
+  color: var(--txt-darkgreen);
+}
+
+.color-txtBlack {
+  color: var(--txt-black);
+}
+
+.color-txtGray {
+  color: var(--txt-gray);
+}

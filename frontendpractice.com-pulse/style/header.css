@@ -1,0 +1,130 @@
+/*----------HEADER----------*/
+
+header {
+  background-color: var(--bg-green);
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 2rem;
+
+  @media (max-width: 750px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "one two"
+      "three three";
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.mobile-menu,
+.menu {
+  background-color: var(--bg-green);
+  display: block;
+}
+
+.mobile-menu a,
+.menu a {
+  color: var(--txt-darkgreen);
+}
+
+.menu a:hover:not(.btn-sign-up) {
+  color: var(--txt-black);
+  transition: 0.5s;
+}
+
+.mobile-menu ul,
+.menu ul {
+  list-style: none;
+}
+
+.mobile-menu ul :nth-child(3)>*,
+.menu ul :nth-child(3)>* {
+  color: var(--txt-black);
+
+  @media (max-width: 750px) {
+    color: var(--txt-darkgreen);
+  }
+}
+
+.mobile-menu ul li,
+.menu ul li {
+  display: inline-block;
+  padding: 1rem;
+}
+
+/* Button Sign Up */
+.btn-sign-up {
+  background-color: transparent;
+  color: var(--txt-darkgreen);
+  border: solid 2px var(--txt-darkgreen);
+  font-weight: bolder;
+  white-space: nowrap;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+}
+
+.btn-sign-up:hover {
+  box-shadow: -0.3rem 0.3rem 0px var(--txt-darkgreen);
+  translate: 0.3rem -0.3rem;
+}
+
+/* Button Burger */
+.btn-burger {
+  background-color: transparent;
+  color: var(--txt-darkgreen);
+  font-weight: bolder;
+  border: solid 2px var(--txt-darkgreen);
+  display: none;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+
+  @media (max-width: 750px) {
+    display: block;
+    justify-self: right;
+    width: min-content;
+  }
+}
+
+
+.mobile-menu {
+  font-weight: bolder;
+  font-size: 1.5rem;
+  visibility: hidden;
+  grid-area: three;
+  position: absolute;
+}
+
+.mobile-menu ul li {
+  opacity: 0;
+  text-align: right;
+  display: block;
+}
+
+@media (max-width: 750px) {
+
+  /* hide menu and style mobile menu*/
+  .menu {
+    display: none;
+  }
+
+  .btn-burger:checked+label {
+    color: var(--txt-black);
+    border-color: var(--txt-black);
+    transition: 0.3s;
+  }
+
+  .btn-burger:checked~.mobile-menu {
+    visibility: visible;
+    position: static;
+  }
+
+  .btn-burger:checked~.mobile-menu ul li {
+    opacity: 1;
+    transition: opacity 0.5s;
+  }
+
+}
