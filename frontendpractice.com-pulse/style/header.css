@@ -78,10 +78,11 @@ header {
   color: var(--txt-darkgreen);
   font-weight: bolder;
   border: solid 2px var(--txt-darkgreen);
+  text-align: center;
   display: none;
   padding: 0.3rem 0.8rem;
   cursor: pointer;
-
+  
   @media (max-width: 750px) {
     display: block;
     justify-self: right;
