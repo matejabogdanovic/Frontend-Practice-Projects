@@ -150,15 +150,16 @@
 
   /* change order of cards */
   .hero-pricing> :nth-child(1) {
-    display: none;
-  }
-
-  .hero-pricing> :nth-child(2) {
+    /* display: none; */
     grid-area: one;
   }
 
-  .hero-pricing> :nth-child(3) {
+  .hero-pricing> :nth-child(2) {
     grid-area: two;
+  }
+
+  .hero-pricing> :nth-child(3) {
+    grid-area: three;
   }
 
 }
