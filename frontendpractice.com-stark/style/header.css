@@ -1,0 +1,104 @@
+.menu{
+  background-color: var(--cream);
+}
+
+.menu nav{
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 900;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.mobile-menu a,
+.menu a{
+  display: flex;
+}
+
+.menu nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.menu nav ul> *{
+  padding: 0 0.5rem;
+}
+
+.mobile-menu nav ul li a,
+.menu nav ul li a{
+  color: var(--blue);
+  padding: 0.3rem 0.9rem;
+  border-radius: 0.4rem;
+  border: solid transparent 2px;
+}
+
+/* hover on nav links -> show border */
+.menu nav ul li a:hover{
+  border-color: var(--blue);
+  border-style: solid;
+}
+
+.btn-free-trial{
+  color: var(--white) !important;
+  background-color: var(--blue);
+}
+
+.btn-free-trial:hover{
+  opacity: .9;
+  transition: opacity 0.3s;
+}
+
+#box-hamburger, .btn-hamburger{
+  display: none;
+}
+
+.mobile-menu{
+  background-color: var(--cream);
+  display: none;
+  position: relative;
+  height: 100vh;
+}
+
+@media (max-width: 900px) {
+
+  .menu nav> :first-child{
+    display: inline;
+  }
+
+  .menu nav ul li :not(.btn-free-trial){
+    display: none;
+  }
+
+  .btn-free-trial{
+    white-space: wrap;
+  }
+
+  /* btn burger styling */
+  .btn-hamburger{
+    display: block;
+    color: var(--blue);
+    cursor: pointer;
+  }
+
+  /* when clicked burger */
+  #box-hamburger:checked + .btn-hamburger{
+    color: rebeccapurple;
+  }
+
+  #box-hamburger:checked ~ .mobile-menu{
+    display: block;
+  }
+
+  body:has(#box-hamburger:checked){
+    overflow: hidden;
+  }
+}
+
+
+
