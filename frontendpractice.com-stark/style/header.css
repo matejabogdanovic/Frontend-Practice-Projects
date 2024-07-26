@@ -63,7 +63,7 @@
   background-color: var(--cream);
   display: none;
   position: relative;
-  height: 100vh;
+  min-height: 100svh;
 }
 
 .mobile-menu a{
@@ -135,7 +135,8 @@
   }
 
   body:has(#box-hamburger:checked){
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 }
 
