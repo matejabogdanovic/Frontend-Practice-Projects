@@ -9,6 +9,7 @@
   --cream: #f6f6eb;
   --blue: #381fd1;
   --white: #ffffff;
+  --neutral-gray: #e5e5e6;
 }
 
 html{
@@ -17,6 +18,7 @@ html{
 
 body {
   scroll-behavior: smooth;
+  margin: 0;
 }
 
 a {
