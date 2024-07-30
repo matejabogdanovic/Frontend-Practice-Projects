@@ -32,6 +32,9 @@
 
 .mobile-menu nav ul li> a,
 .menu nav ul li> a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--blue);
   padding: 0.3rem 0.9rem;
   border-radius: 0.4rem;
