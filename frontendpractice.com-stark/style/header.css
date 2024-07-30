@@ -15,7 +15,7 @@
 
 .mobile-menu a,
 .menu a{
-  display: flex;
+  display: inline-block;
 }
 
 .menu nav ul {
